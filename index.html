@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoras Funcionais</title>
+    <style>
+        /* Estilo da página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 700px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .resultado {
+            color: #2196F3;
+            font-size: 1.1em;
+        }
+
+        .section {
+            max-width: 700px;
+            margin: 20px 0;
+        }
+
+        .info {
+            background-color: #e0e0e0;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .info h3 {
+            color: #4CAF50;
+        }
+
+        .info ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <h2>Seção de Tecnologia e Química em Ação</h2>
+        <p>A Norma Regulamentadora 15 (NR 15) é uma das normas do Ministério do Trabalho e Emprego do Brasil que trata das atividades e operações insalubres, ou seja, aquelas que podem causar danos à saúde dos trabalhadores devido às condições em que são realizadas. A NR 15 estabelece limites e condições para garantir a segurança e saúde no ambiente de trabalho. A segurança no trabalho e a observância das normas regulamentadoras são essenciais para proteger a saúde dos trabalhadores, minimizar custos, promover a produtividade e garantir a conformidade legal.</p>
+        
+        <h3>Implementação dos Cálculos do ANEXO 1 da NR 15</h3>
+        <ul>
+            <li>Levantamento das exigências da NR 15 para cálculo de insalubridade por ruído.</li>
+            <li>Identificação das variáveis necessárias para o cálculo (ex.: níveis de pressão sonora, tempo de exposição).</li>
+            <li>Desenvolvimento da programação para o cálculo.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Calculadora de Salário com Insalubridade</h2>
+        <p>Esta calculadora ajuda a determinar o salário final considerando o grau de insalubridade, baseado na NR 15.</p>
+    </div>
+
+    <h2>Calculadora de Salário com Insalubridade</h2>
+    <div class="container">
+        <label>Salário Base (R$):</label>
+        <input type="text" id="salarioBase" placeholder="Ex: 2000">
+        <label>Grau de Insalubridade (%):</label>
+        <input type="text" id="grauInsalubridade" placeholder="Ex: 20">
+        <button onclick="calcularSalario()">Calcular</button>
+        <p id="resultadoSalario" class="resultado"></p>
+    </div>
+
+    <h2>Calculadora de Insalubridade por Ruído</h2>
+    <div class="container">
+        <label>Nível de Pressão Sonora (dB):</label>
+        <input type="text" id="nivelPressaoSonora" placeholder="Ex: 90">
+        <label>Tempo de Exposição (horas):</label>
+        <input type="text" id="tempoExposicaoRuido" placeholder="Ex: 8">
+        <button onclick="calcularInsalubridade()">Calcular</button>
+        <p id="resultadoInsalubridade" class="resultado"></p>
+    </div>
+
+    <div class="section">
+        <h2>Seção de Física</h2>
+        <h3>Fórmulas Físicas Utilizadas</h3>
+        <p>Aqui estão algumas fórmulas de física essenciais para cálculos relacionados à eletricidade e resistência:</p>
+        <ul>
+            <li><strong>Lei de Ohm:</strong> <code>U = R . I</code> - Onde U é a tensão, R é a resistência e I é a corrente.</li>
+            <li><strong>Resistência em Paralelo:</strong> <code>1 / Req = 1 / R1 + 1 / R2 + 1 / R3</code> - Onde Req é a resistência equivalente.</li>
+            <li><strong>Resistência em Série:</strong> <code>Req = R1 + R2 + R3</code> - Onde Req é a resistência total.</li>
+        </ul>
+    </div>
+
+    <h2>Calculadora de Potência (Watts)</h2>
+    <div class="container">
+        <label>Tensão (V):</label>
+        <input type="text" id="tensao" placeholder="Ex: 220">
+        <label>Corrente (A):</label>
+        <input type="text" id="corrente" placeholder="Ex: 10">
+        <button onclick="calcularPotencia()">Calcular</button>
+        <p id="resultadoPotencia" class="resultado"></p>
+    </div>
+
+    <h2>Calculadora de Resistência Elétrica</h2>
+    <div class="container">
+        <label>Resistência 1 (Ω):</label>
+        <input type="text" id="resistencia1" placeholder="Ex: 10">
+        <label>Resistência 2 (Ω):</label>
+        <input type="text" id="resistencia2" placeholder="Ex: 20">
+        <label>Resistência 3 (Ω):</label>
+        <input type="text" id="resistencia3" placeholder="Ex: 30">
+        <button onclick="calcularResistencia()">Calcular</button>
+        <p id="resultadoResistencia" class="resultado"></p>
+    </div>
+
+    
+
+    <div class="info">
+        <h3>Grupo Três</h3>
+        <p><strong>Integrantes:</strong></p>
+        <ul>
+            <li>Elizeu</li>
+            <li>Guilherme Mayer</li>
+            <li>Lucas Gomes</li>
+            <li>Luiz Gustavo</li>
+            <li>Natália</li>
+            <li>Sara</li>
+        </ul>
+    </div>
+
+    <script>
+         // Calculadora de Salário com Insalubridade
+         function calcularSalario() {
+            var salarioBase = parseFloat(document.getElementById("salarioBase").value);
+            var grauInsalubridade = parseFloat(document.getElementById("grauInsalubridade").value);
+            var resultado = "";
+
+            if (isNaN(salarioBase) || isNaN(grauInsalubridade) || salarioBase <= 0 || grauInsalubridade < 0) {
+                resultado = "Por favor, insira valores válidos.";
+            } else {
+                var salarioFinal = salarioBase + (salarioBase * (grauInsalubridade / 100));
+                resultado = "Salário com Insalubridade: R$ " + salarioFinal.toFixed(2);
+            }
+
+            document.getElementById("resultadoSalario").innerText = resultado;
+        }
+        // Calculadora de Insalubridade por Ruído
+        function calcularInsalubridade() {
+            var nivelPressaoSonora = parseFloat(document.getElementById("nivelPressaoSonora").value);
+            var tempoExposicao = parseFloat(document.getElementById("tempoExposicaoRuido").value);
+            var resultado = "";
+
+            if (isNaN(nivelPressaoSonora) || isNaN(tempoExposicao) || nivelPressaoSonora <= 0 || tempoExposicao <= 0) {
+                resultado = "Por favor, insira valores válidos.";
+            } else if (nivelPressaoSonora > 85 && tempoExposicao > 8) {
+                resultado = "O ruído é prejudicial à saúde!";
+            } else {
+                resultado = "O ruído não é prejudicial à saúde.";
+            }
+
+            document.getElementById("resultadoInsalubridade").innerText = resultado;
+        }
+
+        // Calculadora de Potência em Watts
+        function calcularPotencia() {
+            var tensao = parseFloat(document.getElementById("tensao").value);
+            var corrente = parseFloat(document.getElementById("corrente").value);
+            var potencia = tensao * corrente;
+
+            document.getElementById("resultadoPotencia").innerText = "Potência: " + potencia + " Watts";
+        }
+
+        // Calculadora de Resistência Elétrica
+        function calcularResistencia() {
+            var resistencia1 = parseFloat(document.getElementById("resistencia1").value);
+            var resistencia2 = parseFloat(document.getElementById("resistencia2").value);
+            var resistencia3 = parseFloat(document.getElementById("resistencia3").value);
+            var resultado = "";
+
+            if (isNaN(resistencia1) || isNaN(resistencia2) || isNaN(resistencia3)) {
+                resultado = "Por favor, insira valores válidos.";
+            } else {
+                var resistenciaSerie = resistencia1 + resistencia2 + resistencia3;
+                var resistenciaParalela = 1 / (1 / resistencia1 + 1 / resistencia2 + 1 / resistencia3);
+                
+                resultado = "Resistência Total em Série: " + resistenciaSerie + " Ω\n" +
+                            "Resistência Total em Paralelo: " + resistenciaParalela.toFixed(2) + " Ω";
+            }
+
+            document.getElementById("resultadoResistencia").innerText = resultado;
+        }
+
+       
+    </script>
+
+</body>
+</html>
